@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InsurHackMobile.Views.MainPage"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Image Source="http://www.pngmart.com/files/10/Internet-Speedometer-PNG-HD.png"/>
+        <Button Text="Start!" 
+                BackgroundColor="White"
+                HorizontalOptions="CenterAndExpand"/>
+    </StackLayout>
+
+</ContentPage>

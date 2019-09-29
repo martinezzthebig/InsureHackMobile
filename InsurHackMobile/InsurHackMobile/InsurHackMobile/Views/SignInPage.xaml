@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Welcome"
+             x:Class="InsurHackMobile.Views.SignInPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="40" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Label Text="E-mail" Grid.Row="0"/>
+                <Entry Text="{Binding Email}"
+                       Grid.Row="1"/>
+                <Label Text="Password" Grid.Row="2"/>
+                <Entry Text="{Binding Password}"
+                       IsPassword="True"
+                       Grid.Row="3"/>
+                <Button Text="SIGN IN" 
+                        Grid.Row="4"
+                        Command="{Binding SignInCommand}"/>
+                <Button Text="SIGN UP" 
+                        Grid.Row="5"
+                        Command="{Binding NavigateToSignUpCommand}"/>
+                <Label Text="{Binding ErrorLabel}" Grid.Row="6" TextColor="Red"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
